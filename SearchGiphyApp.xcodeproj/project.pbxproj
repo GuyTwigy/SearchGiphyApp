@@ -10,6 +10,7 @@
 		0A5032332C536955F69FA4D5 /* Pods_SearchGiphyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCAF0A4F94DC16005AE702BA /* Pods_SearchGiphyApp.framework */; };
 		9DBEBAA7280CBDDD00331EBB /* GifCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBEBAA5280CBDDD00331EBB /* GifCell.swift */; };
 		9DBEBAA8280CBDDD00331EBB /* GifCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DBEBAA6280CBDDD00331EBB /* GifCell.xib */; };
+		9DBEBAAA280CBF6200331EBB /* Time_Hans_Zimmer_Inception.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9DBEBAA9280CBF6200331EBB /* Time_Hans_Zimmer_Inception.mp3 */; };
 		9DC248A7280CB886000CC90A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC248A6280CB886000CC90A /* AppDelegate.swift */; };
 		9DC248A9280CB886000CC90A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC248A8280CB886000CC90A /* SceneDelegate.swift */; };
 		9DC248AB280CB886000CC90A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC248AA280CB886000CC90A /* ViewController.swift */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		9DBEBAA5280CBDDD00331EBB /* GifCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifCell.swift; sourceTree = "<group>"; };
 		9DBEBAA6280CBDDD00331EBB /* GifCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GifCell.xib; sourceTree = "<group>"; };
+		9DBEBAA9280CBF6200331EBB /* Time_Hans_Zimmer_Inception.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Time_Hans_Zimmer_Inception.mp3; sourceTree = "<group>"; };
 		9DC248A3280CB886000CC90A /* SearchGiphyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SearchGiphyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DC248A6280CB886000CC90A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DC248A8280CB886000CC90A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				9DBEBAA5280CBDDD00331EBB /* GifCell.swift */,
 				9DBEBAA6280CBDDD00331EBB /* GifCell.xib */,
 				9DC248AC280CB886000CC90A /* Main.storyboard */,
+				9DBEBAA9280CBF6200331EBB /* Time_Hans_Zimmer_Inception.mp3 */,
 				9DC248AF280CB888000CC90A /* Assets.xcassets */,
 				9DC248B1280CB888000CC90A /* LaunchScreen.storyboard */,
 				9DC248B4280CB888000CC90A /* Info.plist */,
@@ -165,6 +168,7 @@
 				9DC248B3280CB888000CC90A /* LaunchScreen.storyboard in Resources */,
 				9DC248B0280CB888000CC90A /* Assets.xcassets in Resources */,
 				9DBEBAA8280CBDDD00331EBB /* GifCell.xib in Resources */,
+				9DBEBAAA280CBF6200331EBB /* Time_Hans_Zimmer_Inception.mp3 in Resources */,
 				9DC248AE280CB886000CC90A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

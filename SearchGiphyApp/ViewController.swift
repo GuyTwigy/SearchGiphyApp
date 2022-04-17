@@ -6,23 +6,34 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
 
     var gifArray: [GiphyData] = []
     var pageCounter = 1
+    var isOn = true
+    var player: AVAudioPlayer?
+    var searchBarText: String = ""
     
     @IBOutlet weak var loader: UIActivityIndicatorView!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var backgroundMusicToggle: UISwitch!
+    @IBOutlet weak var onOffLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupSound()
         searchBar.delegate = self
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(UINib(nibName: GifCell.nibName, bundle: nil), forCellWithReuseIdentifier: GifCell.nibName)
-        getGif(search: "barcelona",pageCounter: pageCounter,firstLoad: true)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
     func getGif(search: String, pageCounter: Int, firstLoad: Bool) {
@@ -45,6 +56,45 @@ class ViewController: UIViewController {
                 }
                 self.collectionView.reloadData()
                 self.loader.stopAnimating()
+            }
+        }
+    }
+    
+    func setupSound() {
+        let urlString = Bundle.main.path(forResource: "Time_Hans_Zimmer_Inception", ofType: "mp3")
+        do {
+            guard let urlString = urlString else {
+                print("Somthing went wrong with the audio file")
+                return
+            }
+            try AVAudioSession.sharedInstance().setMode(.default)
+            try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
+            player = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: urlString))
+            
+            guard let player = player else {
+                print("Something went wrong")
+                return
+            }
+            player.play()
+        } catch {
+            print("Somthing went wrong with the audio")
+        }
+    }
+    @IBAction func toggleMusic(_ sender: Any) {
+        isOn = !isOn
+        if backgroundMusicToggle.isOn {
+            // playMusic
+            onOffLabel.text = "On"
+            backgroundMusicToggle.setOn(isOn, animated: true)
+            if let player = player, !player.isPlaying {
+                player.play()
+            }
+        } else {
+            // dontPlay
+            onOffLabel.text = "Off"
+            backgroundMusicToggle.setOn(isOn, animated: true)
+            if let player = player, player.isPlaying {
+                player.stop()
             }
         }
     }
@@ -72,16 +122,24 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        if (indexPath.row == gifArray.count - 1 ) {
+        if (indexPath.row == gifArray.count - 1) {
             pageCounter += 1
-            getGif(search: "barcelona", pageCounter: pageCounter, firstLoad: false)
-            
+            getGif(search: searchBarText, pageCounter: pageCounter, firstLoad: false)
         }
     }
 }
 
 extension ViewController: UISearchBarDelegate {
-    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+    }
+ 
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText.count > 2 {
+            searchBarText = searchText
+            getGif(search: searchBarText,pageCounter: pageCounter,firstLoad: true)
+        }
+    }
 }
 
 
