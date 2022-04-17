@@ -125,7 +125,6 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
         let fullGifVC = FullGifVC()
         fullGifVC.gifArray = gifArray
         fullGifVC.index = indexPath.row
-        fullGifVC.navigationController?.setNavigationBarHidden(false, animated: true)
         navigationController?.pushViewController(fullGifVC, animated: true)
     }
     
@@ -144,7 +143,10 @@ extension ViewController: UISearchBarDelegate {
  
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText.count > 2 {
-            searchBarText = searchText
+            let string =  searchText
+            if let string = string.addingPercentEncoding(withAllowedCharacters: .urlUserAllowed){
+                searchBarText = string
+            }
             getGif(search: searchBarText,pageCounter: pageCounter,firstLoad: true)
         }
     }
