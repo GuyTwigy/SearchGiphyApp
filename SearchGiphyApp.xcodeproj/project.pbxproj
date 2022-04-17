@@ -11,6 +11,8 @@
 		9DBEBAA7280CBDDD00331EBB /* GifCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBEBAA5280CBDDD00331EBB /* GifCell.swift */; };
 		9DBEBAA8280CBDDD00331EBB /* GifCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DBEBAA6280CBDDD00331EBB /* GifCell.xib */; };
 		9DBEBAAA280CBF6200331EBB /* Time_Hans_Zimmer_Inception.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9DBEBAA9280CBF6200331EBB /* Time_Hans_Zimmer_Inception.mp3 */; };
+		9DBEBAAD280CC40800331EBB /* FullGifVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBEBAAB280CC40800331EBB /* FullGifVC.swift */; };
+		9DBEBAAE280CC40800331EBB /* FullGifVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DBEBAAC280CC40800331EBB /* FullGifVC.xib */; };
 		9DC248A7280CB886000CC90A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC248A6280CB886000CC90A /* AppDelegate.swift */; };
 		9DC248A9280CB886000CC90A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC248A8280CB886000CC90A /* SceneDelegate.swift */; };
 		9DC248AB280CB886000CC90A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC248AA280CB886000CC90A /* ViewController.swift */; };
@@ -25,6 +27,8 @@
 		9DBEBAA5280CBDDD00331EBB /* GifCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifCell.swift; sourceTree = "<group>"; };
 		9DBEBAA6280CBDDD00331EBB /* GifCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GifCell.xib; sourceTree = "<group>"; };
 		9DBEBAA9280CBF6200331EBB /* Time_Hans_Zimmer_Inception.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Time_Hans_Zimmer_Inception.mp3; sourceTree = "<group>"; };
+		9DBEBAAB280CC40800331EBB /* FullGifVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullGifVC.swift; sourceTree = "<group>"; };
+		9DBEBAAC280CC40800331EBB /* FullGifVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FullGifVC.xib; sourceTree = "<group>"; };
 		9DC248A3280CB886000CC90A /* SearchGiphyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SearchGiphyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DC248A6280CB886000CC90A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DC248A8280CB886000CC90A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +100,8 @@
 				9DC248BA280CB955000CC90A /* NetworkManager.swift */,
 				9DC248BC280CB96A000CC90A /* GiphyModel.swift */,
 				9DBEBAA5280CBDDD00331EBB /* GifCell.swift */,
+				9DBEBAAB280CC40800331EBB /* FullGifVC.swift */,
+				9DBEBAAC280CC40800331EBB /* FullGifVC.xib */,
 				9DBEBAA6280CBDDD00331EBB /* GifCell.xib */,
 				9DC248AC280CB886000CC90A /* Main.storyboard */,
 				9DBEBAA9280CBF6200331EBB /* Time_Hans_Zimmer_Inception.mp3 */,
@@ -169,6 +175,7 @@
 				9DC248B0280CB888000CC90A /* Assets.xcassets in Resources */,
 				9DBEBAA8280CBDDD00331EBB /* GifCell.xib in Resources */,
 				9DBEBAAA280CBF6200331EBB /* Time_Hans_Zimmer_Inception.mp3 in Resources */,
+				9DBEBAAE280CC40800331EBB /* FullGifVC.xib in Resources */,
 				9DC248AE280CB886000CC90A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -207,6 +214,7 @@
 			files = (
 				9DC248BB280CB955000CC90A /* NetworkManager.swift in Sources */,
 				9DC248AB280CB886000CC90A /* ViewController.swift in Sources */,
+				9DBEBAAD280CC40800331EBB /* FullGifVC.swift in Sources */,
 				9DBEBAA7280CBDDD00331EBB /* GifCell.swift in Sources */,
 				9DC248A7280CB886000CC90A /* AppDelegate.swift in Sources */,
 				9DC248A9280CB886000CC90A /* SceneDelegate.swift in Sources */,

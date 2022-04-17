@@ -34,6 +34,8 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
+        searchBar.becomeFirstResponder()
+        searchBar.resignFirstResponder()
     }
     
     func getGif(search: String, pageCounter: Int, firstLoad: Bool) {
@@ -108,17 +110,23 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GifCell.nibName, for: indexPath) as! GifCell
-        
-        cell.gifView.isAnimationEnabled = true
-        if let url = URL(string: gifArray[indexPath.row].images.original.url) {
-            cell.gifView.load(url)
-        }
+        cell.gifArray = gifArray
+        cell.index = indexPath.row
+        cell.setupContent()
         return cell
     }
         
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = (view.frame.width) / 3.2
         return CGSize(width: width, height: width)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let fullGifVC = FullGifVC()
+        fullGifVC.gifArray = gifArray
+        fullGifVC.index = indexPath.row
+        fullGifVC.navigationController?.setNavigationBarHidden(false, animated: true)
+        navigationController?.pushViewController(fullGifVC, animated: true)
     }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
