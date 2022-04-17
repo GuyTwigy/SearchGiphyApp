@@ -1,0 +1,6 @@
+framework module Pods_SearchGiphyApp {
+  umbrella header "Pods-SearchGiphyApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
