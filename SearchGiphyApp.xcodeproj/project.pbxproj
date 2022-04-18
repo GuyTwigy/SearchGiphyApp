@@ -16,6 +16,10 @@
 		9DBEBAB1280CC7C700331EBB /* SlideUpCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBEBAAF280CC7C700331EBB /* SlideUpCell.swift */; };
 		9DBEBAB2280CC7C700331EBB /* SlideUpCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DBEBAB0280CC7C700331EBB /* SlideUpCell.xib */; };
 		9DBEBAB4280CC86E00331EBB /* SlideUpTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBEBAB3280CC86E00331EBB /* SlideUpTableView.swift */; };
+		9DBEBAB6280D4B1900331EBB /* ExtensionUserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBEBAB5280D4B1900331EBB /* ExtensionUserDefault.swift */; };
+		9DBEBAB8280D501F00331EBB /* ExtensionUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBEBAB7280D501F00331EBB /* ExtensionUIViewController.swift */; };
+		9DBEBABB280D539400331EBB /* FavoriteGifList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBEBAB9280D539400331EBB /* FavoriteGifList.swift */; };
+		9DBEBABC280D539400331EBB /* FavoriteGifList.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DBEBABA280D539400331EBB /* FavoriteGifList.xib */; };
 		9DC248A7280CB886000CC90A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC248A6280CB886000CC90A /* AppDelegate.swift */; };
 		9DC248A9280CB886000CC90A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC248A8280CB886000CC90A /* SceneDelegate.swift */; };
 		9DC248AB280CB886000CC90A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC248AA280CB886000CC90A /* ViewController.swift */; };
@@ -35,6 +39,10 @@
 		9DBEBAAF280CC7C700331EBB /* SlideUpCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideUpCell.swift; sourceTree = "<group>"; };
 		9DBEBAB0280CC7C700331EBB /* SlideUpCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SlideUpCell.xib; sourceTree = "<group>"; };
 		9DBEBAB3280CC86E00331EBB /* SlideUpTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideUpTableView.swift; sourceTree = "<group>"; };
+		9DBEBAB5280D4B1900331EBB /* ExtensionUserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUserDefault.swift; sourceTree = "<group>"; };
+		9DBEBAB7280D501F00331EBB /* ExtensionUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIViewController.swift; sourceTree = "<group>"; };
+		9DBEBAB9280D539400331EBB /* FavoriteGifList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteGifList.swift; sourceTree = "<group>"; };
+		9DBEBABA280D539400331EBB /* FavoriteGifList.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteGifList.xib; sourceTree = "<group>"; };
 		9DC248A3280CB886000CC90A /* SearchGiphyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SearchGiphyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DC248A6280CB886000CC90A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DC248A8280CB886000CC90A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +118,10 @@
 				9DBEBAAF280CC7C700331EBB /* SlideUpCell.swift */,
 				9DBEBAB0280CC7C700331EBB /* SlideUpCell.xib */,
 				9DBEBAAB280CC40800331EBB /* FullGifVC.swift */,
+				9DBEBAB9280D539400331EBB /* FavoriteGifList.swift */,
+				9DBEBABA280D539400331EBB /* FavoriteGifList.xib */,
+				9DBEBAB5280D4B1900331EBB /* ExtensionUserDefault.swift */,
+				9DBEBAB7280D501F00331EBB /* ExtensionUIViewController.swift */,
 				9DBEBAAC280CC40800331EBB /* FullGifVC.xib */,
 				9DBEBAA6280CBDDD00331EBB /* GifCell.xib */,
 				9DC248AC280CB886000CC90A /* Main.storyboard */,
@@ -186,6 +198,7 @@
 				9DBEBAAA280CBF6200331EBB /* Time_Hans_Zimmer_Inception.mp3 in Resources */,
 				9DBEBAB2280CC7C700331EBB /* SlideUpCell.xib in Resources */,
 				9DBEBAAE280CC40800331EBB /* FullGifVC.xib in Resources */,
+				9DBEBABC280D539400331EBB /* FavoriteGifList.xib in Resources */,
 				9DC248AE280CB886000CC90A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -222,14 +235,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DBEBAB8280D501F00331EBB /* ExtensionUIViewController.swift in Sources */,
 				9DC248BB280CB955000CC90A /* NetworkManager.swift in Sources */,
 				9DC248AB280CB886000CC90A /* ViewController.swift in Sources */,
 				9DBEBAB1280CC7C700331EBB /* SlideUpCell.swift in Sources */,
 				9DBEBAB4280CC86E00331EBB /* SlideUpTableView.swift in Sources */,
 				9DBEBAAD280CC40800331EBB /* FullGifVC.swift in Sources */,
 				9DBEBAA7280CBDDD00331EBB /* GifCell.swift in Sources */,
+				9DBEBAB6280D4B1900331EBB /* ExtensionUserDefault.swift in Sources */,
 				9DC248A7280CB886000CC90A /* AppDelegate.swift in Sources */,
 				9DC248A9280CB886000CC90A /* SceneDelegate.swift in Sources */,
+				9DBEBABB280D539400331EBB /* FavoriteGifList.swift in Sources */,
 				9DC248BD280CB96A000CC90A /* GiphyModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

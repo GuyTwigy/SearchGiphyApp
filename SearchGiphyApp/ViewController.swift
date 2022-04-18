@@ -11,6 +11,7 @@ import AVFoundation
 class ViewController: UIViewController {
 
     var gifArray: [GiphyData] = []
+    var favArray: [GiphyData] = []
     var pageCounter = 1
     var isOn = true
     var player: AVAudioPlayer?
@@ -33,6 +34,9 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        if let fav = UserDefaults.standard.favListSave {
+            favArray = fav
+        }
         navigationController?.setNavigationBarHidden(true, animated: animated)
         searchBar.becomeFirstResponder()
         searchBar.resignFirstResponder()
@@ -82,6 +86,11 @@ class ViewController: UIViewController {
             print("Somthing went wrong with the audio")
         }
     }
+    @IBAction func favButtonTapped(_ sender: Any) {
+        let FavVC = FavoriteGifList()
+        navigationController?.pushViewController(FavVC, animated: true)
+    }
+    
     @IBAction func toggleMusic(_ sender: Any) {
         isOn = !isOn
         if backgroundMusicToggle.isOn {
@@ -125,6 +134,8 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
         let fullGifVC = FullGifVC()
         fullGifVC.gifArray = gifArray
         fullGifVC.index = indexPath.row
+        fullGifVC.delegate = self
+        fullGifVC.state = .fromSearch
         navigationController?.pushViewController(fullGifVC, animated: true)
     }
     
@@ -152,4 +163,9 @@ extension ViewController: UISearchBarDelegate {
     }
 }
 
-
+extension ViewController: FullGifVCDelegate {
+    func updateFavArray(favArray: [GiphyData]) {
+        self.favArray = favArray
+        UserDefaults.standard.favListSave = favArray
+    }
+}

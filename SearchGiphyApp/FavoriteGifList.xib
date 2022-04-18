@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FavoriteGifList" customModule="SearchGiphyApp" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="fZE-Yn-36D" id="HhR-kP-ZW3"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🥇My Favorite Gif list🥇" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sV8-Ws-Liv">
+                    <rect key="frame" x="0.0" y="59" width="414" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="p6r-Sy-ALL"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="fZE-Yn-36D">
+                    <rect key="frame" x="0.0" y="119" width="414" height="777"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nIZ-Na-xDZ">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="sV8-Ws-Liv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="5vE-44-02x"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="sV8-Ws-Liv" secondAttribute="trailing" id="CfI-5K-byL"/>
+                <constraint firstItem="fZE-Yn-36D" firstAttribute="top" secondItem="sV8-Ws-Liv" secondAttribute="bottom" id="FsF-iQ-jUd"/>
+                <constraint firstItem="sV8-Ws-Liv" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="15" id="JLh-5J-46j"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fZE-Yn-36D" secondAttribute="trailing" id="W3b-05-JNt"/>
+                <constraint firstAttribute="bottom" secondItem="fZE-Yn-36D" secondAttribute="bottom" id="kbr-E1-596"/>
+                <constraint firstItem="fZE-Yn-36D" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="oKw-Eq-gTq"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="139"/>
+        </view>
+    </objects>
+</document>
