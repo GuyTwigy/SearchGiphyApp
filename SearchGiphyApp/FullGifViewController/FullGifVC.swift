@@ -29,12 +29,14 @@ class FullGifVC: UIViewController {
     let tableView = SlideUpTableView()
     let screenSize = UIScreen.main.bounds.size
     var tableViewHeight = CGFloat()
+    let cellHeight: CGFloat = 60
     var urlString = String()
     var slideUpRowsArray: [String] = []
     var delegate: FullGifVCDelegate?
     var state: State?
     
     @IBOutlet weak var gifFullView: ImageSourceView!
+    @IBOutlet weak var loader: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -125,6 +127,7 @@ class FullGifVC: UIViewController {
             })
             dismissSlideup()
             presentAlert(withTitle: "Successfully saved to camera roll", message: "💪💪💪")
+            loader.stopAnimating()
         }
     }
 
@@ -179,14 +182,12 @@ extension FullGifVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60
+        return cellHeight
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0 {
-//            guard let url = URL(string: gifArray[index].images.downsized_large.url) else {
-//                return
-//            }
+            loader.startAnimating()
             saveToCameraRoll()
         }
         if indexPath.row == 1 {

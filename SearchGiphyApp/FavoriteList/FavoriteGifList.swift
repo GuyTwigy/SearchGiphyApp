@@ -12,11 +12,12 @@ class FavoriteGifList: UIViewController {
     var favArray: [GiphyData] = []
     
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var emptyListLabel: UILabel!
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Remove All", style: .plain, target: self, action: #selector(removeAllFavorites))
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(UINib(nibName: GifCell.nibName, bundle: nil), forCellWithReuseIdentifier: GifCell.nibName)
@@ -28,7 +29,26 @@ class FavoriteGifList: UIViewController {
         if let fav = UserDefaults.standard.favListSave {
             favArray = fav
         }
+        if favArray.isEmpty {
+            collectionView.isHidden = true
+            emptyListLabel.isHidden = false
+        } else {
+            collectionView.isHidden = false
+            emptyListLabel.isHidden = true
+        }
         collectionView.reloadData()
+    }
+    
+    @objc func removeAllFavorites() {
+        if favArray.isEmpty {
+            presentAlert(withTitle: "Favorite list is empty", message: "Nothing to remove")
+        } else {
+            presentAlertWithAction(withTitle: "Are you sure???", message: "All your favorites gif will be lost.", complition: {
+                self.favArray.removeAll()
+                UserDefaults.standard.favListSave = self.favArray
+                self.collectionView.reloadData()
+                self.emptyListLabel.isHidden = false
+            })}
     }
 }
 
@@ -51,11 +71,9 @@ extension FavoriteGifList: UICollectionViewDelegate, UICollectionViewDataSource,
         fullGifVC.state = .fromFav
         navigationController?.pushViewController(fullGifVC, animated: true)
     }
-        
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = (view.frame.width) / 3.2
         return CGSize(width: width, height: width)
     }
-    
-    
 }

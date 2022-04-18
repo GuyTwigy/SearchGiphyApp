@@ -10,6 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FavoriteGifList" customModule="SearchGiphyApp" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="fZE-Yn-36D" id="HhR-kP-ZW3"/>
+                <outlet property="emptyListLabel" destination="57h-Xf-wuF" id="XVe-6j-VEy"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,7 +20,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🥇My Favorite Gif list🥇" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sV8-Ws-Liv">
-                    <rect key="frame" x="0.0" y="59" width="414" height="60"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="60"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="60" id="p6r-Sy-ALL"/>
                     </constraints>
@@ -28,7 +29,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="fZE-Yn-36D">
-                    <rect key="frame" x="0.0" y="119" width="414" height="777"/>
+                    <rect key="frame" x="0.0" y="104" width="414" height="792"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nIZ-Na-xDZ">
                         <size key="itemSize" width="128" height="128"/>
@@ -37,15 +38,24 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You don't have any favorites gif, start search and add some" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="57h-Xf-wuF">
+                    <rect key="frame" x="30" y="174" width="354" height="115"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="57h-Xf-wuF" secondAttribute="trailing" constant="30" id="0Gh-1e-mvv"/>
                 <constraint firstItem="sV8-Ws-Liv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="5vE-44-02x"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="sV8-Ws-Liv" secondAttribute="trailing" id="CfI-5K-byL"/>
                 <constraint firstItem="fZE-Yn-36D" firstAttribute="top" secondItem="sV8-Ws-Liv" secondAttribute="bottom" id="FsF-iQ-jUd"/>
-                <constraint firstItem="sV8-Ws-Liv" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="15" id="JLh-5J-46j"/>
+                <constraint firstItem="sV8-Ws-Liv" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="JLh-5J-46j"/>
+                <constraint firstItem="57h-Xf-wuF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="Lbc-jI-d2s"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fZE-Yn-36D" secondAttribute="trailing" id="W3b-05-JNt"/>
+                <constraint firstItem="57h-Xf-wuF" firstAttribute="top" secondItem="sV8-Ws-Liv" secondAttribute="bottom" constant="70" id="XyU-eL-tdk"/>
                 <constraint firstAttribute="bottom" secondItem="fZE-Yn-36D" secondAttribute="bottom" id="kbr-E1-596"/>
                 <constraint firstItem="fZE-Yn-36D" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="oKw-Eq-gTq"/>
             </constraints>

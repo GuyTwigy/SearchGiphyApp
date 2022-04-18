@@ -87,6 +87,76 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9DBEBABD280DF9D000331EBB /* GiphyModel */ = {
+			isa = PBXGroup;
+			children = (
+				9DC248BC280CB96A000CC90A /* GiphyModel.swift */,
+			);
+			path = GiphyModel;
+			sourceTree = "<group>";
+		};
+		9DBEBABE280DF9F000331EBB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9DBEBAB5280D4B1900331EBB /* ExtensionUserDefault.swift */,
+				9DBEBAB7280D501F00331EBB /* ExtensionUIViewController.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9DBEBABF280DFA2200331EBB /* GifCell */ = {
+			isa = PBXGroup;
+			children = (
+				9DBEBAA5280CBDDD00331EBB /* GifCell.swift */,
+				9DBEBAA6280CBDDD00331EBB /* GifCell.xib */,
+			);
+			path = GifCell;
+			sourceTree = "<group>";
+		};
+		9DBEBAC0280DFA4000331EBB /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				9DC248BA280CB955000CC90A /* NetworkManager.swift */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		9DBEBAC1280DFA6700331EBB /* FullGifViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9DBEBAAB280CC40800331EBB /* FullGifVC.swift */,
+				9DBEBAAC280CC40800331EBB /* FullGifVC.xib */,
+			);
+			path = FullGifViewController;
+			sourceTree = "<group>";
+		};
+		9DBEBAC2280DFB8200331EBB /* slideUpSheet */ = {
+			isa = PBXGroup;
+			children = (
+				9DBEBAB3280CC86E00331EBB /* SlideUpTableView.swift */,
+				9DBEBAAF280CC7C700331EBB /* SlideUpCell.swift */,
+				9DBEBAB0280CC7C700331EBB /* SlideUpCell.xib */,
+			);
+			path = slideUpSheet;
+			sourceTree = "<group>";
+		};
+		9DBEBAC3280DFBF200331EBB /* FavoriteList */ = {
+			isa = PBXGroup;
+			children = (
+				9DBEBAB9280D539400331EBB /* FavoriteGifList.swift */,
+				9DBEBABA280D539400331EBB /* FavoriteGifList.xib */,
+			);
+			path = FavoriteList;
+			sourceTree = "<group>";
+		};
+		9DBEBAC4280DFC1700331EBB /* BackgroundMusic */ = {
+			isa = PBXGroup;
+			children = (
+				9DBEBAA9280CBF6200331EBB /* Time_Hans_Zimmer_Inception.mp3 */,
+			);
+			path = BackgroundMusic;
+			sourceTree = "<group>";
+		};
 		9DC2489A280CB886000CC90A = {
 			isa = PBXGroup;
 			children = (
@@ -111,21 +181,15 @@
 				9DC248A6280CB886000CC90A /* AppDelegate.swift */,
 				9DC248A8280CB886000CC90A /* SceneDelegate.swift */,
 				9DC248AA280CB886000CC90A /* ViewController.swift */,
-				9DC248BA280CB955000CC90A /* NetworkManager.swift */,
-				9DC248BC280CB96A000CC90A /* GiphyModel.swift */,
-				9DBEBAA5280CBDDD00331EBB /* GifCell.swift */,
-				9DBEBAB3280CC86E00331EBB /* SlideUpTableView.swift */,
-				9DBEBAAF280CC7C700331EBB /* SlideUpCell.swift */,
-				9DBEBAB0280CC7C700331EBB /* SlideUpCell.xib */,
-				9DBEBAAB280CC40800331EBB /* FullGifVC.swift */,
-				9DBEBAB9280D539400331EBB /* FavoriteGifList.swift */,
-				9DBEBABA280D539400331EBB /* FavoriteGifList.xib */,
-				9DBEBAB5280D4B1900331EBB /* ExtensionUserDefault.swift */,
-				9DBEBAB7280D501F00331EBB /* ExtensionUIViewController.swift */,
-				9DBEBAAC280CC40800331EBB /* FullGifVC.xib */,
-				9DBEBAA6280CBDDD00331EBB /* GifCell.xib */,
 				9DC248AC280CB886000CC90A /* Main.storyboard */,
-				9DBEBAA9280CBF6200331EBB /* Time_Hans_Zimmer_Inception.mp3 */,
+				9DBEBAC0280DFA4000331EBB /* NetworkManager */,
+				9DBEBABE280DF9F000331EBB /* Extensions */,
+				9DBEBABF280DFA2200331EBB /* GifCell */,
+				9DBEBABD280DF9D000331EBB /* GiphyModel */,
+				9DBEBAC1280DFA6700331EBB /* FullGifViewController */,
+				9DBEBAC2280DFB8200331EBB /* slideUpSheet */,
+				9DBEBAC3280DFBF200331EBB /* FavoriteList */,
+				9DBEBAC4280DFC1700331EBB /* BackgroundMusic */,
 				9DC248AF280CB888000CC90A /* Assets.xcassets */,
 				9DC248B1280CB888000CC90A /* LaunchScreen.storyboard */,
 				9DC248B4280CB888000CC90A /* Info.plist */,

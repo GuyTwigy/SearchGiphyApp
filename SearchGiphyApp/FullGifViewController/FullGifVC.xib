@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FullGifVC" customModule="SearchGiphyApp" customModuleProvider="target">
             <connections>
                 <outlet property="gifFullView" destination="tTK-8u-hW2" id="Xrn-yT-9rn"/>
+                <outlet property="loader" destination="9yT-DZ-xGZ" id="sPa-aK-to3"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -23,12 +24,18 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <color key="backgroundColor" systemColor="labelColor"/>
                 </view>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="9yT-DZ-xGZ">
+                    <rect key="frame" x="188.5" y="434.5" width="37" height="37"/>
+                    <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="tTK-8u-hW2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="K6f-XR-HJh"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="tTK-8u-hW2" secondAttribute="trailing" id="SG6-Py-oos"/>
+                <constraint firstItem="9yT-DZ-xGZ" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="dHH-QX-dRX"/>
+                <constraint firstItem="9yT-DZ-xGZ" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="mze-yl-MLP"/>
                 <constraint firstAttribute="bottom" secondItem="tTK-8u-hW2" secondAttribute="bottom" id="pgS-Rx-aSs"/>
                 <constraint firstItem="tTK-8u-hW2" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="yWN-7R-8PP"/>
             </constraints>

@@ -86,6 +86,7 @@ class ViewController: UIViewController {
             print("Somthing went wrong with the audio")
         }
     }
+    
     @IBAction func favButtonTapped(_ sender: Any) {
         let FavVC = FavoriteGifList()
         navigationController?.pushViewController(FavVC, animated: true)
