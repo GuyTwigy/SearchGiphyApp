@@ -7,9 +7,10 @@
 
 import UIKit
 import AVFoundation
+import ImageIOUIKit
 
 class ViewController: UIViewController {
-
+    
     var gifArray: [GiphyData] = []
     var favArray: [GiphyData] = []
     var pageCounter = 0
@@ -22,6 +23,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var backgroundMusicToggle: UISwitch!
     @IBOutlet weak var onOffLabel: UILabel!
+    @IBOutlet weak var labelFadeOut: UILabel!
+    @IBOutlet weak var fingerTapImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,16 +33,17 @@ class ViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(UINib(nibName: GifCell.nibName, bundle: nil), forCellWithReuseIdentifier: GifCell.nibName)
+        beginingAnimation()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if let fav = UserDefaults.standard.favListSave {
-            favArray = fav
-        }
         navigationController?.setNavigationBarHidden(true, animated: animated)
         searchBar.becomeFirstResponder()
         searchBar.resignFirstResponder()
+        if let fav = UserDefaults.standard.favListSave {
+            favArray = fav
+        }
     }
     
     func getGif(search: String, pageCounter: Int, firstLoad: Bool) {
@@ -67,7 +71,7 @@ class ViewController: UIViewController {
     }
     
     func setupSound() {
-        let urlString = Bundle.main.path(forResource: "Time_Hans_Zimmer_Inception", ofType: "mp3")
+        let urlString = Bundle.main.path(forResource: "what_a_good_day", ofType: "mp3")
         do {
             guard let urlString = urlString else {
                 print("Somthing went wrong with the audio file")
@@ -84,6 +88,30 @@ class ViewController: UIViewController {
             player.play()
         } catch {
             print("Somthing went wrong with the audio")
+        }
+    }
+    
+    func beginingAnimation() {
+        UIView.animate(withDuration: 1.5, delay: 1.5, options: .curveEaseOut, animations: {
+            self.fingerTapImageView.transform = CGAffineTransform(translationX: -130, y: -225)
+            self.fingerTapImageView.alpha = 0.5
+        }) { _ in
+            UIView.animate(withDuration: 1, delay: 1, options: .curveEaseOut, animations: {
+                self.fingerTapImageView.alpha = 1
+            }) { _ in
+                UIView.animate(withDuration: 1, delay: 1, options: .curveEaseOut, animations: {
+                    self.fingerTapImageView.alpha = 0.5
+                }) { _ in
+                    UIView.animate(withDuration: 1, delay: 1, options: .curveEaseOut, animations: {
+                        self.fingerTapImageView.alpha = 1
+                        self.labelFadeOut.alpha = 0
+                    }) { _ in
+                        UIView.animate(withDuration: 2.5, delay: 1.5, options: .curveEaseOut, animations: {
+                            self.fingerTapImageView.alpha = 0
+                        })
+                    }
+                }
+            }
         }
     }
     
@@ -154,6 +182,8 @@ extension ViewController: UISearchBarDelegate {
     }
  
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        fingerTapImageView.isHidden = true
+        labelFadeOut.isHidden = true
         if searchText.count > 2 {
             let string =  searchText
             if let string = string.addingPercentEncoding(withAllowedCharacters: .urlUserAllowed){

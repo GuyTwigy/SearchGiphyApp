@@ -53,7 +53,7 @@
                                             <action selector="toggleMusic:" destination="BYZ-38-t0r" eventType="valueChanged" id="JKq-Ap-JKk"/>
                                         </connections>
                                     </switch>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="On" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c7i-AN-Udi">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="On" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c7i-AN-Udi">
                                         <rect key="frame" x="318.5" y="10" width="22.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -64,6 +64,7 @@
                                 <constraints>
                                     <constraint firstItem="oei-Yt-T48" firstAttribute="leading" secondItem="c7i-AN-Udi" secondAttribute="trailing" constant="8" id="3jd-49-K9H"/>
                                     <constraint firstAttribute="trailing" secondItem="oei-Yt-T48" secondAttribute="trailing" constant="16" id="54o-KR-2Lq"/>
+                                    <constraint firstItem="c7i-AN-Udi" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="V7q-wd-9oe" secondAttribute="trailing" constant="8" symbolic="YES" id="E6H-NC-q1d"/>
                                     <constraint firstItem="c7i-AN-Udi" firstAttribute="centerY" secondItem="2pl-Oj-MvA" secondAttribute="centerY" id="Lcq-HA-P8O"/>
                                     <constraint firstItem="V7q-wd-9oe" firstAttribute="centerY" secondItem="2pl-Oj-MvA" secondAttribute="centerY" id="M2W-x9-K3Q"/>
                                     <constraint firstItem="V7q-wd-9oe" firstAttribute="leading" secondItem="2pl-Oj-MvA" secondAttribute="leading" constant="16" id="ZSO-ww-CcJ"/>
@@ -91,17 +92,35 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's find awesome animated Gifs, start by clicking on search " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ssy-Wx-lZ5">
+                                <rect key="frame" x="35" y="479" width="344" height="111"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="black_finger_tap" translatesAutoresizingMaskIntoConstraints="NO" id="bzm-6x-w8x">
+                                <rect key="frame" x="177" y="419" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="V0y-IX-Bwj"/>
+                                    <constraint firstAttribute="width" constant="60" id="rhC-Sb-8pN"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="2pl-Oj-MvA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4Vf-CE-vm7"/>
                             <constraint firstItem="SOR-u1-e30" firstAttribute="top" secondItem="Ehl-tF-qh1" secondAttribute="bottom" id="6xs-n1-3A4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ssy-Wx-lZ5" secondAttribute="trailing" constant="35" id="8eG-Gk-mps"/>
                             <constraint firstItem="bDO-l7-HBt" firstAttribute="top" secondItem="SOR-u1-e30" secondAttribute="bottom" id="8lL-Xx-O86"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bDO-l7-HBt" secondAttribute="trailing" constant="5" id="9At-ct-p34"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2pl-Oj-MvA" secondAttribute="trailing" id="Cww-I0-cdt"/>
+                            <constraint firstItem="ssy-Wx-lZ5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="G8d-yH-LmS"/>
+                            <constraint firstItem="bzm-6x-w8x" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="KU0-R9-FOm"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ehl-tF-qh1" secondAttribute="trailing" id="TgN-aY-Nh3"/>
                             <constraint firstItem="SOR-u1-e30" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="VyE-Qw-gY4"/>
+                            <constraint firstItem="ssy-Wx-lZ5" firstAttribute="top" secondItem="SOR-u1-e30" secondAttribute="bottom" constant="260" id="cM9-gM-RFi"/>
+                            <constraint firstItem="bzm-6x-w8x" firstAttribute="top" secondItem="SOR-u1-e30" secondAttribute="bottom" constant="200" id="dUh-dA-zVf"/>
                             <constraint firstItem="Ehl-tF-qh1" firstAttribute="top" secondItem="2pl-Oj-MvA" secondAttribute="bottom" id="fZe-wj-WTR"/>
                             <constraint firstItem="bDO-l7-HBt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="lJY-Nm-9LY"/>
                             <constraint firstItem="Ehl-tF-qh1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ldV-hQ-JRq"/>
@@ -114,6 +133,8 @@
                     <connections>
                         <outlet property="backgroundMusicToggle" destination="oei-Yt-T48" id="hmG-pP-EQS"/>
                         <outlet property="collectionView" destination="bDO-l7-HBt" id="1Kx-uA-Q5L"/>
+                        <outlet property="fingerTapImageView" destination="bzm-6x-w8x" id="Wkk-hd-ldZ"/>
+                        <outlet property="labelFadeOut" destination="ssy-Wx-lZ5" id="l5Z-Ul-OFK"/>
                         <outlet property="loader" destination="K8O-az-bm3" id="jfM-2t-4nt"/>
                         <outlet property="onOffLabel" destination="c7i-AN-Udi" id="26A-3u-Krp"/>
                         <outlet property="searchBar" destination="SOR-u1-e30" id="MdM-c2-Wat"/>
@@ -143,6 +164,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="black_finger_tap" width="410" height="256"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -10,7 +10,6 @@
 		0A5032332C536955F69FA4D5 /* Pods_SearchGiphyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCAF0A4F94DC16005AE702BA /* Pods_SearchGiphyApp.framework */; };
 		9DBEBAA7280CBDDD00331EBB /* GifCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBEBAA5280CBDDD00331EBB /* GifCell.swift */; };
 		9DBEBAA8280CBDDD00331EBB /* GifCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DBEBAA6280CBDDD00331EBB /* GifCell.xib */; };
-		9DBEBAAA280CBF6200331EBB /* Time_Hans_Zimmer_Inception.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9DBEBAA9280CBF6200331EBB /* Time_Hans_Zimmer_Inception.mp3 */; };
 		9DBEBAAD280CC40800331EBB /* FullGifVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBEBAAB280CC40800331EBB /* FullGifVC.swift */; };
 		9DBEBAAE280CC40800331EBB /* FullGifVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DBEBAAC280CC40800331EBB /* FullGifVC.xib */; };
 		9DBEBAB1280CC7C700331EBB /* SlideUpCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBEBAAF280CC7C700331EBB /* SlideUpCell.swift */; };
@@ -20,6 +19,7 @@
 		9DBEBAB8280D501F00331EBB /* ExtensionUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBEBAB7280D501F00331EBB /* ExtensionUIViewController.swift */; };
 		9DBEBABB280D539400331EBB /* FavoriteGifList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBEBAB9280D539400331EBB /* FavoriteGifList.swift */; };
 		9DBEBABC280D539400331EBB /* FavoriteGifList.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DBEBABA280D539400331EBB /* FavoriteGifList.xib */; };
+		9DC10551280ED6880083289B /* what_a_good_day.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9DC10550280ED6880083289B /* what_a_good_day.mp3 */; };
 		9DC248A7280CB886000CC90A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC248A6280CB886000CC90A /* AppDelegate.swift */; };
 		9DC248A9280CB886000CC90A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC248A8280CB886000CC90A /* SceneDelegate.swift */; };
 		9DC248AB280CB886000CC90A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC248AA280CB886000CC90A /* ViewController.swift */; };
@@ -33,7 +33,6 @@
 /* Begin PBXFileReference section */
 		9DBEBAA5280CBDDD00331EBB /* GifCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifCell.swift; sourceTree = "<group>"; };
 		9DBEBAA6280CBDDD00331EBB /* GifCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GifCell.xib; sourceTree = "<group>"; };
-		9DBEBAA9280CBF6200331EBB /* Time_Hans_Zimmer_Inception.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Time_Hans_Zimmer_Inception.mp3; sourceTree = "<group>"; };
 		9DBEBAAB280CC40800331EBB /* FullGifVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullGifVC.swift; sourceTree = "<group>"; };
 		9DBEBAAC280CC40800331EBB /* FullGifVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FullGifVC.xib; sourceTree = "<group>"; };
 		9DBEBAAF280CC7C700331EBB /* SlideUpCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideUpCell.swift; sourceTree = "<group>"; };
@@ -43,6 +42,7 @@
 		9DBEBAB7280D501F00331EBB /* ExtensionUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIViewController.swift; sourceTree = "<group>"; };
 		9DBEBAB9280D539400331EBB /* FavoriteGifList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteGifList.swift; sourceTree = "<group>"; };
 		9DBEBABA280D539400331EBB /* FavoriteGifList.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteGifList.xib; sourceTree = "<group>"; };
+		9DC10550280ED6880083289B /* what_a_good_day.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = what_a_good_day.mp3; sourceTree = "<group>"; };
 		9DC248A3280CB886000CC90A /* SearchGiphyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SearchGiphyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DC248A6280CB886000CC90A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DC248A8280CB886000CC90A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -130,14 +130,14 @@
 			path = FullGifViewController;
 			sourceTree = "<group>";
 		};
-		9DBEBAC2280DFB8200331EBB /* slideUpSheet */ = {
+		9DBEBAC2280DFB8200331EBB /* SlideUpSheet */ = {
 			isa = PBXGroup;
 			children = (
 				9DBEBAB3280CC86E00331EBB /* SlideUpTableView.swift */,
 				9DBEBAAF280CC7C700331EBB /* SlideUpCell.swift */,
 				9DBEBAB0280CC7C700331EBB /* SlideUpCell.xib */,
 			);
-			path = slideUpSheet;
+			path = SlideUpSheet;
 			sourceTree = "<group>";
 		};
 		9DBEBAC3280DFBF200331EBB /* FavoriteList */ = {
@@ -152,7 +152,7 @@
 		9DBEBAC4280DFC1700331EBB /* BackgroundMusic */ = {
 			isa = PBXGroup;
 			children = (
-				9DBEBAA9280CBF6200331EBB /* Time_Hans_Zimmer_Inception.mp3 */,
+				9DC10550280ED6880083289B /* what_a_good_day.mp3 */,
 			);
 			path = BackgroundMusic;
 			sourceTree = "<group>";
@@ -187,7 +187,7 @@
 				9DBEBABF280DFA2200331EBB /* GifCell */,
 				9DBEBABD280DF9D000331EBB /* GiphyModel */,
 				9DBEBAC1280DFA6700331EBB /* FullGifViewController */,
-				9DBEBAC2280DFB8200331EBB /* slideUpSheet */,
+				9DBEBAC2280DFB8200331EBB /* SlideUpSheet */,
 				9DBEBAC3280DFBF200331EBB /* FavoriteList */,
 				9DBEBAC4280DFC1700331EBB /* BackgroundMusic */,
 				9DC248AF280CB888000CC90A /* Assets.xcassets */,
@@ -259,7 +259,7 @@
 				9DC248B3280CB888000CC90A /* LaunchScreen.storyboard in Resources */,
 				9DC248B0280CB888000CC90A /* Assets.xcassets in Resources */,
 				9DBEBAA8280CBDDD00331EBB /* GifCell.xib in Resources */,
-				9DBEBAAA280CBF6200331EBB /* Time_Hans_Zimmer_Inception.mp3 in Resources */,
+				9DC10551280ED6880083289B /* what_a_good_day.mp3 in Resources */,
 				9DBEBAB2280CC7C700331EBB /* SlideUpCell.xib in Resources */,
 				9DBEBAAE280CC40800331EBB /* FullGifVC.xib in Resources */,
 				9DBEBABC280D539400331EBB /* FavoriteGifList.xib in Resources */,

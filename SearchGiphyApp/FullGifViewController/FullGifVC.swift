@@ -37,6 +37,7 @@ class FullGifVC: UIViewController {
     
     @IBOutlet weak var gifFullView: ImageSourceView!
     @IBOutlet weak var loader: UIActivityIndicatorView!
+    @IBOutlet weak var fadeOutLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +46,7 @@ class FullGifVC: UIViewController {
         }
         setupContent()
         setupTableView()
+        fadeOutView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -53,6 +55,8 @@ class FullGifVC: UIViewController {
     }
     
     func setupContent() {
+        fadeOutLabel.layer.cornerRadius = 10
+        fadeOutLabel.text = "Tap on Gif for\n more options"
         gifFullView.isAnimationEnabled = true
         switch state {
         case .fromSearch:
@@ -117,6 +121,12 @@ class FullGifVC: UIViewController {
     
     @objc func tappedOutsideTableView() {
         dismissSlideup()
+    }
+    
+    func fadeOutView() {
+        UIView.animate(withDuration: 1.5, delay: 2, options: .curveEaseOut, animations: {
+            self.fadeOutLabel.alpha = 0
+        })
     }
     
     func saveToCameraRoll() {
