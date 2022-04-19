@@ -12,10 +12,11 @@ class NetworkManager {
     static var shared = NetworkManager()
     var baseUrl = "https://api.giphy.com/v1/gifs/search"
     
-    func getGiphySearch(search: String, page: Int = 1, firstLoad: Bool, callBack: @escaping (Bool, [GiphyData]?) -> Void) {
+    func getGiphySearch(search: String, page: Int = 0, firstLoad: Bool, callBack: @escaping (Bool, [GiphyData]?) -> Void) {
         let apiKey = "?api_key=WzrHZBIvMMkvAcdAy9nu0LNsWp8vgo8f"
         let gifQuery = "&q=\(search)"
-        let fullUrl = baseUrl + apiKey + gifQuery
+        let paginationCounter = "&offset=\(page)"
+        let fullUrl = baseUrl + apiKey + gifQuery + paginationCounter
         
         guard let url = URL(string: fullUrl) else {
             print("Failed to load gif")

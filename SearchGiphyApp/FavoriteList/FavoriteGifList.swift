@@ -16,8 +16,7 @@ class FavoriteGifList: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Remove All", style: .plain, target: self, action: #selector(removeAllFavorites))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Remove All 🚮", style: .plain, target: self, action: #selector(removeAllFavorites))
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(UINib(nibName: GifCell.nibName, bundle: nil), forCellWithReuseIdentifier: GifCell.nibName)
@@ -48,7 +47,8 @@ class FavoriteGifList: UIViewController {
                 UserDefaults.standard.favListSave = self.favArray
                 self.collectionView.reloadData()
                 self.emptyListLabel.isHidden = false
-            })}
+            })
+        }
     }
 }
 

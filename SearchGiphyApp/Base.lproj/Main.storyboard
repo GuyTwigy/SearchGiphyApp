@@ -81,9 +81,9 @@
                                 <color key="color" red="0.20784313730000001" green="0.40784313729999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bDO-l7-HBt">
-                                <rect key="frame" x="0.0" y="219" width="414" height="643"/>
+                                <rect key="frame" x="5" y="219" width="404" height="643"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="yQ3-DA-OLO">
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="5" minimumInteritemSpacing="5" id="yQ3-DA-OLO">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -98,12 +98,12 @@
                             <constraint firstItem="2pl-Oj-MvA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4Vf-CE-vm7"/>
                             <constraint firstItem="SOR-u1-e30" firstAttribute="top" secondItem="Ehl-tF-qh1" secondAttribute="bottom" id="6xs-n1-3A4"/>
                             <constraint firstItem="bDO-l7-HBt" firstAttribute="top" secondItem="SOR-u1-e30" secondAttribute="bottom" id="8lL-Xx-O86"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bDO-l7-HBt" secondAttribute="trailing" id="9At-ct-p34"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bDO-l7-HBt" secondAttribute="trailing" constant="5" id="9At-ct-p34"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2pl-Oj-MvA" secondAttribute="trailing" id="Cww-I0-cdt"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ehl-tF-qh1" secondAttribute="trailing" id="TgN-aY-Nh3"/>
                             <constraint firstItem="SOR-u1-e30" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="VyE-Qw-gY4"/>
                             <constraint firstItem="Ehl-tF-qh1" firstAttribute="top" secondItem="2pl-Oj-MvA" secondAttribute="bottom" id="fZe-wj-WTR"/>
-                            <constraint firstItem="bDO-l7-HBt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="lJY-Nm-9LY"/>
+                            <constraint firstItem="bDO-l7-HBt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="lJY-Nm-9LY"/>
                             <constraint firstItem="Ehl-tF-qh1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ldV-hQ-JRq"/>
                             <constraint firstItem="2pl-Oj-MvA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="o3v-sT-XZC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bDO-l7-HBt" secondAttribute="bottom" id="pOF-bO-LWe"/>

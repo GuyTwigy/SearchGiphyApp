@@ -12,7 +12,7 @@ class ViewController: UIViewController {
 
     var gifArray: [GiphyData] = []
     var favArray: [GiphyData] = []
-    var pageCounter = 1
+    var pageCounter = 0
     var isOn = true
     var player: AVAudioPlayer?
     var searchBarText: String = ""
@@ -44,7 +44,7 @@ class ViewController: UIViewController {
     
     func getGif(search: String, pageCounter: Int, firstLoad: Bool) {
         if firstLoad {
-            self.pageCounter = 1
+            self.pageCounter = 0
         }
         loader.startAnimating()
         NetworkManager.shared.getGiphySearch(search: search, page: pageCounter, firstLoad: firstLoad) { result, giphy in

@@ -29,9 +29,9 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="fZE-Yn-36D">
-                    <rect key="frame" x="0.0" y="104" width="414" height="792"/>
+                    <rect key="frame" x="5" y="104" width="404" height="792"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nIZ-Na-xDZ">
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="nIZ-Na-xDZ">
                         <size key="itemSize" width="128" height="128"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -54,10 +54,10 @@
                 <constraint firstItem="fZE-Yn-36D" firstAttribute="top" secondItem="sV8-Ws-Liv" secondAttribute="bottom" id="FsF-iQ-jUd"/>
                 <constraint firstItem="sV8-Ws-Liv" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="JLh-5J-46j"/>
                 <constraint firstItem="57h-Xf-wuF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="Lbc-jI-d2s"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fZE-Yn-36D" secondAttribute="trailing" id="W3b-05-JNt"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fZE-Yn-36D" secondAttribute="trailing" constant="5" id="W3b-05-JNt"/>
                 <constraint firstItem="57h-Xf-wuF" firstAttribute="top" secondItem="sV8-Ws-Liv" secondAttribute="bottom" constant="70" id="XyU-eL-tdk"/>
                 <constraint firstAttribute="bottom" secondItem="fZE-Yn-36D" secondAttribute="bottom" id="kbr-E1-596"/>
-                <constraint firstItem="fZE-Yn-36D" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="oKw-Eq-gTq"/>
+                <constraint firstItem="fZE-Yn-36D" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="5" id="oKw-Eq-gTq"/>
             </constraints>
             <point key="canvasLocation" x="139" y="139"/>
         </view>
