@@ -124,7 +124,7 @@ class FullGifVC: UIViewController {
     }
     
     func fadeOutView() {
-        UIView.animate(withDuration: 1.5, delay: 2, options: .curveEaseOut, animations: {
+        UIView.animate(withDuration: 2, delay: 2, options: .curveEaseOut, animations: {
             self.fadeOutLabel.alpha = 0
         })
     }

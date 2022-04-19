@@ -30,7 +30,7 @@
                     <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </activityIndicatorView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap on Gif for more options" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pll-y8-zeE">
-                    <rect key="frame" x="50" y="244" width="314" height="72"/>
+                    <rect key="frame" x="50" y="44" width="314" height="72"/>
                     <color key="backgroundColor" systemColor="systemYellowColor"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -43,7 +43,7 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pll-y8-zeE" secondAttribute="trailing" constant="50" id="5ee-EY-GeI"/>
                 <constraint firstItem="9yT-DZ-xGZ" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="8SJ-B3-FsJ"/>
                 <constraint firstItem="tTK-8u-hW2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="K6f-XR-HJh"/>
-                <constraint firstItem="pll-y8-zeE" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="200" id="QMw-6M-XUo"/>
+                <constraint firstItem="pll-y8-zeE" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="QMw-6M-XUo"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="tTK-8u-hW2" secondAttribute="trailing" id="SG6-Py-oos"/>
                 <constraint firstItem="pll-y8-zeE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="bVC-fS-Ijw"/>
                 <constraint firstItem="9yT-DZ-xGZ" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="le1-bc-lgX"/>

@@ -35,21 +35,9 @@ struct Images: Codable {
 }
 
 struct Original: Codable {
-    let height: String
-    let width: String
-    let size: String
     let url: String
-    let mp4_size: String
-    let mp4: String
-    let webp_size: String
-    let webp: String
-    let frames: String
-    let hash: String
 }
 
 struct DownsizedLarge: Codable {
-    let height: String
-    let width: String
-    let size: String
     let url: String
 }
